@@ -26,7 +26,10 @@ sudo apt-get install -y emacs24
 
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
-wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install heroku
 
 # git pull and install dotfiles as well
 cd $HOME
